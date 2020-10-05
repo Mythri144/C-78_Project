@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>
+      "My Digital Family Book"
+    </title>
+  </head>
+  <body>
+    <p id="p1">My Digital Family Book</p>
+    <img id="img1" src="family_book.jpg">
+    <p id="m1">Cover</p>
+    <div><button type= "button" onclick="next()">Next</button>&nbsp;&nbsp;<button type= "button" onclick="re()">Reload</button></div>
+  </body>
+  <style>
+      html{
+text-align: center;
+}
+
+#p1{
+    font-variant: small-caps;
+    font-size: 50px;
+    word-spacing: 5px;
+}
+
+#img1{
+    width: 700px;
+    border: 3px solid darkslategrey;
+    padding: 5px;
+    border-radius: 5px;
+    height: 500px;
+}
+
+#m1{
+    font-size: 30px;
+}
+
+      </style>
+      <script>
+          var members= ["Mythri Menon (Me)", "Ramani Ranjit Menon (My Mother)", "Ranjit Kumar Menon (My Dad)", "Please Click On The Reload Button To Go To The Start Of 'My Digital Family Book'... "];
+var images= ["me.jpg", "mother.jpg", "father.jpg", "Reload.png"];
+var i= 0;
+  function next(){
+    document.getElementById("m1").innerHTML=members[i];  document.getElementById("img1").src=images[i];
+ i++;
+  }
+  function re(){
+    window.location.reload(true);
+  }
+      </script>
+</html>
